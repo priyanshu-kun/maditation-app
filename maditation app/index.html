@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maditation App</title>
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="vid-container">
+            <video loop>
+                <source src="assets/video/rain.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="time-select">
+            <button class="duration-btns" data-item="300">5 minutes</button>
+            <button class="duration-btns" data-item="600">10 minutes</button>
+            <button class="duration-btns" data-item="1200">20 minutes</button>
+        </div>
+        <div class="player-container">
+            <audio class="song">
+                <source src="assets/audio/rain.mp3">
+            </audio>
+            <img class="play" src="assets/svg/play.svg" alt="play svg">
+            <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+            </svg>
+            <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#00ccff" stroke-width="20" />
+            </svg>
+
+            <h3 class="time-display">0:00</h3>
+
+        </div>
+        <div class="sound-picker">
+            <button class="app-videos" data-sound="assets/audio/rain.mp3" data-video="assets/video/rain.mp4"><img src="assets/svg/rain.svg"
+                    alt="rain svg"></button>
+            <button class="app-videos" data-sound="assets/audio/beach.mp3" data-video="assets/video/beach.mp4"><img
+                    src="assets/svg/beach.svg" alt="beach svg"></button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="brain.js"></script>
+</body>
+
+</html>

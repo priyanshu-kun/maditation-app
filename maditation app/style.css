@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-select, .sound-picker ,.player-container{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player-container{
+    position: relative;
+}
+
+.player-container svg {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+
+.time-display {
+    position: absolute;
+    bottom: 10%;
+    font-size: 50px;
+    color: white;
+}
+
+video {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+  }
+  
+.time-select button ,.sound-picker button{
+    color: white;
+    background: none;
+    cursor: pointer;
+    height: 8rem;
+    width: 8rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    /* padding: 20px; */
+    font-size: 1.2rem;
+    outline: none;
+    transition: all 300ms ease-in;
+    /* box-shadow: inset 0 0 10px 8px rgba(30, 118, 233, 0.3); */
+}
+
+.time-select button:hover {
+    border: none;
+    transform: scale(1.1);
+    background: rgb(0, 195, 255);
+    box-shadow: inset 0 0 10px 8px rgba(0, 162, 255, 0.3);
+}
+
+.sound-picker button {
+    border: none;
+    height: 10rem;
+    width: 10rem;
+    padding: 30px;
+}
+
+.sound-picker button:nth-child(1){
+    background: rgb(0, 38, 255,0.6);
+    box-shadow: inset 0 0 15px 10px rgba(0, 162, 255, 0.4);
+    outline: none;
+    /* color: ; */
+}
+.sound-picker button:nth-child(1):hover{
+    transform: scale(1.1);
+   
+}
+
+.sound-picker button:nth-child(2){
+    background: #ff9900;
+    box-shadow: inset 0 0 15px 10px rgba(250, 218, 177, 0.4);
+    outline: none;
+}
+.sound-picker button:nth-child(2):hover{
+    transform: scale(1.1);
+}
+
+.sound-picker button img {
+    height: 100%;
+}
